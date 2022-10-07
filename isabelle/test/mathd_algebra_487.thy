@@ -13,6 +13,7 @@ theorem mathd_algebra_487:
     and "a + b = 1"
     and "d = c^2"
     and "c + d = 1"
+    and "a \<noteq> c"
   shows "sqrt ((a - c)^2 + (b - d)^2)= sqrt 10"
   sorry
 
