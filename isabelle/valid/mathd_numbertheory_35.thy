@@ -7,6 +7,7 @@ theory mathd_numbertheory_35
 begin
 
 theorem mathd_numbertheory_35:
+  fixes k :: nat
   assumes "k^2 = 196"
   shows "(\<Sum> k \<in> { n ::nat. n dvd k}. k) = (24::nat)"
   sorry
