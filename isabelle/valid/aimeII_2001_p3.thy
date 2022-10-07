@@ -2,11 +2,11 @@
   Authors: Albert Qiaochu Jiang
 *)
 
-theory aimeI_2001_p3 imports
+theory aimeII_2001_p3 imports
   Complex_Main
 begin
 
-theorem aimeI_2001_p3:
+theorem aimeII_2001_p3:
   fixes x :: "nat \<Rightarrow> int"
   assumes h0 : "x 1 = 211"
     and h1 : "x 2 = 375"
