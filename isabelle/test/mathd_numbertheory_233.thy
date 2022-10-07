@@ -9,7 +9,9 @@ begin
 
 theorem mathd_numbertheory_233:
   fixes b::int
-  assumes "\<forall>b::int. 0\<le>b \<and> b\<le>11^2 \<and> [b * 24 = 1] (mod (11^2))"
+  assumes "0\<le>b"
+    and "b<11^2"
+    and "[b * 24 = 1] (mod (11^2))"
   shows "b = 116"
   sorry
 
