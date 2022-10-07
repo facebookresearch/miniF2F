@@ -8,8 +8,8 @@ begin
 
 theorem amc12a_2003_p1:
   fixes u v :: "nat \<Rightarrow> nat"
-  assumes u:"\<forall>n. u n = 2 *n +2"
-      and v:"\<forall>n. v n= 2* n +1"
+  assumes u:"\<forall>n. u n = 2 *n"
+      and v:"\<forall>n. v n= 2* n -1"
     shows "(\<Sum> k \<in>{1..2003}. u k) - (\<Sum> k \<in>{1..2003}. v k) = 2003"
       (is "?L = ?R")
 proof -
