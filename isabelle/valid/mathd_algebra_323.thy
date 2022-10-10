@@ -10,7 +10,7 @@ theorem mathd_algebra_323:
   fixes \<sigma>:: "real \<Rightarrow> real"
   assumes "bij \<sigma>"
     and "\<forall> x. \<sigma> x = x^3 - 8" 
-  shows "inv \<sigma> (\<sigma> (inv \<sigma> 19)) = 3"
+  shows "Hilbert_Choice.inv \<sigma> (\<sigma> (Hilbert_Choice.inv \<sigma> 19)) = 3"
   sorry
 
 end   

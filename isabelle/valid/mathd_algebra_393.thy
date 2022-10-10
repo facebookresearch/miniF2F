@@ -10,7 +10,7 @@ theorem mathd_algebra_393:
   fixes \<sigma>::"real \<Rightarrow> real" 
   assumes "bij \<sigma>"
     and "\<forall> x. \<sigma> x = 4 * x^3 + 1"
-  shows "inv \<sigma> 33 = 2"
+  shows "Hilbert_Choice.inv \<sigma> 33 = 2"
   sorry
 
 end   
