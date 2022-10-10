@@ -11,7 +11,7 @@ theorem amc12a_2003_p25:
   assumes "b>0"  
     and "\<forall> x. f x = sqrt (a * x^2 + b * x)"
     and "{x. 0 \<le> f x} = f ` {x. 0 \<le> f x}"
-  shows "a=0 \<or> a =4"
+  shows "a=0 \<or> a = -4"
   sorry
 
 end
