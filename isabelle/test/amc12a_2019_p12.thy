@@ -12,7 +12,7 @@ theorem amc12a_2019_p12:
   assumes "x \<noteq> 1 \<and> y \<noteq> 1"
     and "ln x / ln 2 = ln 16 / ln y"
     and "x * y = 64" 
-  shows "ln (x / y) / ln 2 = 20"
+  shows "(ln (x / y) / ln 2)^2 = 20"
   sorry
 
 end   

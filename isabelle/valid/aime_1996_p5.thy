@@ -17,6 +17,9 @@ theorem aime_1996_p5:
     and h5 : "g (a+b) = 0"
     and h6 : "g (b+c) = 0"
     and h7 : "g (c+a) = 0"
+    and h8 : "a \<noteq> b"
+    and h9 : "a \<noteq> c"
+    and h10 : "b \<noteq> c"
   shows "t=23"
   sorry
 

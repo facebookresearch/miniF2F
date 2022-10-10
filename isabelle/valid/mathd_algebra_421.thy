@@ -17,5 +17,4 @@ theorem mathd_algebra_421:
   shows "c-a=6"
   sorry
 
-
 end
