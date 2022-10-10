@@ -8,10 +8,12 @@ theory mathd_numbertheory_668
 begin
 
 theorem mathd_numbertheory_668:
-  fixes l r::int
+  fixes l r::int and a b::int
   assumes "0\<le>l" "l<7" "0\<le>r" "r<7"
     and "[l * (2 + 3) = 1] (mod 7)" 
-    and "\<exists>x y::int. [x*2=1] (mod 7) \<and>  [x*3=1] (mod 7) \<longrightarrow> r=x+y"
+    and "0\<le>a \<and> a<7 \<and> [a*2=1] (mod 7)"
+    and "0\<le>b \<and> b<7 \<and> [b*3=1] (mod 7)"
+    and "r = (a+b) mod 7"
   shows "l - r = 1"
   sorry
 

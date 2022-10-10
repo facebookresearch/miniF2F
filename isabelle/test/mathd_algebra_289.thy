@@ -12,7 +12,8 @@ theorem mathd_algebra_289:
   assumes "prime m \<and> prime n"
     and "t < k"
     and "k^2 + n - m * k  = 0"
-    and "t^2 + n - m * t  = 0" 
+    and "t^2 + n - m * t  = 0"
+    and "0 < t"
   shows "m^n + n^m + k^t + t^k = 20"
   sorry
 
