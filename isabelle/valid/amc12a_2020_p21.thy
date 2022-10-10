@@ -9,7 +9,7 @@ begin
 
 theorem amc12a_2020_p21:
   "card {n :: nat. 5 dvd n \<and> lcm (fact 5) n 
-          = 5 * gcd (fact 10) n} = 1"
+          = 5 * gcd (fact 10) n} = 48"
   sorry
 
 end
