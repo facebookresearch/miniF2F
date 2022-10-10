@@ -7,7 +7,7 @@ theory mathd_numbertheory_155
 begin
 
 theorem mathd_numbertheory_155:
-  "card ({x::nat. x mod 19  = 7 \<and> 100\<le>x \<and> x < 1000}) = 52"
+  "card ({x::nat. x mod 19  = 7 \<and> 100\<le>x \<and> x < 1000}) = 48"
   sorry
 
 end   
