@@ -1275,11 +1275,8 @@ begin
   sorry
 end
 
-theorem aime_1987_p8
-  (n : ℕ)
-  (h₀ : 0 < n)
-  (h₁ : ∃! k, (8 : ℝ) / 15 < n / (n + k) ∧ (n : ℝ) / (n + k) < 7 / 13) :
-  n ≤ 112 :=
+theorem aime_1987_p8 :
+  is_greatest {n : ℕ | 0 < n ∧ ∃! k : ℕ, (8 : ℝ) / 15 < n / (n + k) ∧ (n : ℝ) / (n + k) < 7 / 13} 112 :=
 begin
   sorry
 end
