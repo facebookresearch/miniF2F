@@ -1007,7 +1007,8 @@ theorem aime_1996_p5
   (h₄ : f c = 0)
   (h₅ : g (a + b) = 0)
   (h₆ : g (b + c) = 0)
-  (h₇ : g (c + a) = 0) :
+  (h₇ : g (c + a) = 0)
+  (h₈ : list.pairwise (≠) [a, b, c]) :
   t = 23 :=
 begin
   sorry
