@@ -2121,8 +2121,11 @@ end
 theorem amc12a_2002_p12
   (f : ℝ → ℝ)
   (k : ℝ)
+  (a b : ℕ)
   (h₀ : ∀ x, f x = x^2 - 63 * x + k)
-  (h₁ : set.subset (f ⁻¹' {0}) {x : ℝ | ∃ n : ℕ, ↑n = x ∧ nat.prime n}) :
+  (h₁ : f a = 0 ∧ f b = 0)
+  (h₂ : a ≠ b)
+  (h₃ : nat.prime a ∧ nat.prime b) :
   k = 122 :=
 begin
   sorry
