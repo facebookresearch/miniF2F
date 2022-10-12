@@ -2250,8 +2250,9 @@ end
 
 theorem aime_1999_p11
   (m : ℚ)
-  (h₀ : ∑ k in finset.Icc (1 : ℕ) 35, real.sin (5 * k * π / 180) = real.tan (m * π / 180))
-  (h₁ : (m.denom:ℝ) / m.num < 90) :
+  (h₀ : 0 < m)
+  (h₁ : ∑ k in finset.Icc (1 : ℕ) 35, real.sin (5 * k * π / 180) = real.tan (m * π / 180))
+  (h₂ : (m.num:ℝ) / m.denom < 90) :
   ↑m.denom + m.num = 177 :=
 begin
   sorry
