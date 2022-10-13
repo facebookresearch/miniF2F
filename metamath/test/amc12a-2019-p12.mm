@@ -7,7 +7,7 @@ $(
     amc12a-2019-p12.4 @e |- ( ph -> ( 2 logb X ) = ( Y logb ; 1 6 ) ) $@
     amc12a-2019-p12.5 @e |- ( ph -> ( X x. Y ) = ; 6 4 ) $@
     @( (Contributed by Kunhao Zheng, 9-Aug-2021.) @)
-    amc12a-2019-p12 @p |- ( ph -> ( 2 logb ( X / Y ) ) = ; 2 0 ) @=
+    amc12a-2019-p12 @p |- ( ph -> ( ( 2 logb ( X / Y ) ) ^ 2 ) = ; 2 0 ) @=
       ? @.
   @}
 $)
