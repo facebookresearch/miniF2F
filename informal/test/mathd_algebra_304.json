@@ -1,0 +1,1 @@
+{"problem_name": "mathd_algebra_304", "informal_statement": "Compute $91^2$ in your head. Show that it is 8281.", "informal_proof": "Note that $91\\times 91 = (90 + 1)^2 = 90^2 + 2\\cdot 90 + 1 = 8100 + 180 + 1 = 8281$."}

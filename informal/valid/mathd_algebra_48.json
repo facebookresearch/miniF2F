@@ -1,0 +1,1 @@
+{"problem_name": "mathd_algebra_48", "informal_statement": "Simplify $(9-4i)-(-3-4i)$. Show that it is 12.", "informal_proof": "$(9-4i)- (-3-4i) = 9-4i +3 +4i = (9+3) + (-4i+4i) = 12$."}

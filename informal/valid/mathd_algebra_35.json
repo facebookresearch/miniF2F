@@ -1,0 +1,1 @@
+{"problem_name": "mathd_algebra_35", "informal_statement": "If $p (x) = 2-x^2$ and $q(x) = \\frac{6}{x}$, what is the value of $p (q(2))$? Show that it is -7.", "informal_proof": "Since $q(2) = \\frac62 = 3$, we have $p(q(2)) = p(3) = 2-3^2 = -7$."}

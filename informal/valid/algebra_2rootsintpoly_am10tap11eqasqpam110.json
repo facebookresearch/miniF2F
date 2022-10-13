@@ -1,0 +1,1 @@
+{"problem_name": "algebra_2rootsintpoly_am10tap11eqasqpam110", "informal_statement": "Show that for any complex number $a$, $(a-10)(a+11)=a^2+a-110$.", "informal_proof": "By expanding, we get $(a-10)(a+11) = a^2 - 10a + 11a - 10 \\times 11$. After simplification, we have that $(a-10)(a+11)=a^2+a-110$."}

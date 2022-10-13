@@ -1,0 +1,1 @@
+{"problem_name": "algebra_sqineq_2at2pclta2c2p41pc", "informal_statement": "For real numbers a and c, show that $2a(2+c)\\leq a^2+c^2+4(1+c)$.", "informal_proof": "$2a(2+c)\\leq a^2+c^2+4(1+c) \\iff 0\\leq (a-c)^2 -4(a-c)+4$\nThis right hand-side is a second degree polynomial in a-c with discriminant. It follows that it equals 0 in a-c=2 and is positive everywhere else\n"}

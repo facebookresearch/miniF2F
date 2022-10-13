@@ -1,0 +1,1 @@
+{"problem_name": "mathd_numbertheory_66", "informal_statement": "Determine the remainder of 194 (mod 11). Show that it is 7.", "informal_proof": "$$194 = 17 \\cdot 11 + 7 \\implies 194 \\equiv 7 \\pmod{11}.$$"}

@@ -1,0 +1,1 @@
+{"problem_name": "mathd_numbertheory_35", "informal_statement": "What is the sum of the four positive factors of the positive integer value of $\\sqrt{196}$? Show that it is 24.", "informal_proof": "Calculate $\\sqrt{196}=\\sqrt{2^2\\cdot7^2}=2\\cdot7$. The sum of the four positive factors is $1+2+7+14=24$."}

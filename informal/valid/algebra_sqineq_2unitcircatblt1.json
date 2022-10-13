@@ -1,0 +1,1 @@
+{"problem_name": "algebra_sqineq_2unitcircatblt1", "informal_statement": "Show that for any real numbers $a$ and $b$ such that $a^2 + b^2 = 2$, $ab \\leq 1$.", "informal_proof": "We have that $0 \\leq (a-b)^2 = a^2 - 2ab + b^2$. Since $a^2 + b^2 = 2$, the expression becomes $0 \\leq 2 - 2ab$. As a result, $ab \\leq 1$."}

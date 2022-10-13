@@ -1,0 +1,1 @@
+{"problem_name": "mathd_numbertheory_207", "informal_statement": "Convert $852_9$ to base 10. Show that it is 695.", "informal_proof": "We have that $852_9 = 8(9^2) +5(9^1)+ 2(9^0) = 8(81)+5(9)+2(1)=648 + 45 + 2 = 695$."}

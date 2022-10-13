@@ -1,0 +1,1 @@
+{"problem_name": "numbertheory_sumkmulnckeqnmul2pownm1", "informal_statement": "Show that for positive integers $n$ and $k$, if $k \\leq n$, then $\\sum_{k=1}^n (k*C_n^k) = n * 2^{n-1}$.", "informal_proof": "$\\sum_{k=1}^n k \\binom{n}{k} = \\sum_{k=1}^n \\frac{n(n-1)!}{(k-1)!(n-1 -(k-1))!} = n\\sum_{k=1}^n \\binom{n-1}{k-1} = n\\sum_{k=0}^{n-1} \\binom{n-1}{k} = n2^{n-1}$"}

@@ -1,0 +1,1 @@
+{"problem_name": "mathd_numbertheory_102", "informal_statement": "Find the remainder of $2^8$ when it is divided by 5. Show that it is 1.", "informal_proof": "$2^4 = 16 \\equiv 1 \\pmod{5}$, so $2^8 = 2^{2 \\cdot 4} = (2^4)^2 = 16^2 \\equiv 1^2 \\equiv 1 \\pmod{5}$."}

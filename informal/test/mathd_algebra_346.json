@@ -1,0 +1,1 @@
+{"problem_name": "mathd_algebra_346", "informal_statement": "Let $f(x) = 2x-3$ and $g(x) = x+1$. What is the value of $g(f(5)-1)$? Show that it is 7.", "informal_proof": "We have $f(5) = 2(5) -3 = 7$, so $g(f(5)-1) = g(7-1) = g(6) = 6+1 = 7$."}

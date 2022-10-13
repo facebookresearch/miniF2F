@@ -1,0 +1,1 @@
+{"problem_name": "induction_11div10tonmn1ton", "informal_statement": "Show that for any natural number $n$, we have $11\\mid 10^n-(-1)^n$.", "informal_proof": "We have that $10 \\equiv -1 \\mod 11$, so for every natural number $n$,\n$10^n \\equiv (-1)^n \\mod 11$. As a result, for every $n$ we have that $11$ divides $10^n - (-1)^n$."}

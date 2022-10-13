@@ -1,0 +1,1 @@
+{"problem_name": "mathd_algebra_110", "informal_statement": "Simplify $(2-2i)(5+5i)$, where $i^2 = -1.$ Show that it is 20.", "informal_proof": "$(2-2i)(5+5i) = 2(5) + 2(5i) -2i(5) -2i(5i) = 10+10i-10i +10 = 20$."}

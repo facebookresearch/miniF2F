@@ -1,0 +1,1 @@
+{"problem_name": "mathd_algebra_59", "informal_statement": "If $F(a, b, c, d) = a^b + c ^ d$, what is the value of $b$ such that $F(4, b, 2, 3) = 12$? Show that it is 1.", "informal_proof": "Plugging in, we have that $4^b + 2^3 = 12$.  This rearranges to $4^b = 4$, or $b = 1$."}

@@ -1,0 +1,1 @@
+{"problem_name": "mathd_numbertheory_100", "informal_statement": "Find $n$ if $\\gcd(n,40) = 10$ and $\\mathop{\\text{lcm}}[n,40] = 280$. Show that it is 70.", "informal_proof": "We know that $\\gcd(a,b) \\cdot \\mathop{\\text{lcm}}[a,b] = ab$ for all positive integers $a$ and $b$.  Hence, in this case, $10 \\cdot 280 = n \\cdot 40$, so $n = 10 \\cdot 280/40 = 70$."}

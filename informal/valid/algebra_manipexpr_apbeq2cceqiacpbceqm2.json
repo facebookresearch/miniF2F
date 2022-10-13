@@ -1,0 +1,1 @@
+{"problem_name": "algebra_manipexpr_apbeq2cceqiacpbceqm2", "informal_statement": "Given that $a+b = 2c$ and $c = \\text{Im}(1)$, show that $ac+bc=-2$.", "informal_proof": "We have $ac + bc = (a+b)c=2c^2=2i^2=-2$"}

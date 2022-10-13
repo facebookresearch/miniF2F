@@ -1,0 +1,1 @@
+{"problem_name": "mathd_numbertheory_101", "informal_statement": "Find the modulo 4 residue of $17 \\cdot 18$. Show that it is 2.", "informal_proof": "$17 \\cdot 18 \\equiv 1 \\cdot 2 \\equiv 2 \\pmod{4}$."}

@@ -1,0 +1,1 @@
+{"problem_name": "algebra_sqineq_4bap1lt4bsqpap1sq", "informal_statement": "For any two real numbers a and b, show that $4b(a+1)\\leq 4b^2+(a+1)^2$.", "informal_proof": "The result comes from $x^2+y^2 \\geq 2xy$ for all reals $x,y$, applied to $x=2b$ and $y=a+1$."}

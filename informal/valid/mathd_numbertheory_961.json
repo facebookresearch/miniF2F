@@ -1,0 +1,1 @@
+{"problem_name": "mathd_numbertheory_961", "informal_statement": "What is the remainder when 2003 is divided by 11? Show that it is 1.", "informal_proof": "Dividing, we find that $11\\cdot 182=2002$.  Therefore, the remainder when 2003 is divided by 11 is $1$."}

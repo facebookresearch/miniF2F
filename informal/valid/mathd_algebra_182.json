@@ -1,0 +1,1 @@
+{"problem_name": "mathd_algebra_182", "informal_statement": "Expand the following expression: $7(3y+2)$ Show that it is 21y+14.", "informal_proof": "We apply the distributive property to get\\begin{align*}\n7(3y+2) &= 7\\cdot 3y+7\\cdot 2\\\\\n&= 21y+14.\n\\end{align*}"}

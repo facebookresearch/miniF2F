@@ -1,0 +1,1 @@
+{"problem_name": "algebra_2varlineareq_xpeeq7_2xpeeq3_eeq11_xeqn4", "informal_statement": "Given two complex numbers x and e, if we assume that $x + e = 7$ and $2x + e = 3$, then show that $e = 11$ and $x=-4$.", "informal_proof": "First, $x = 2x + e - (x + e) = 3 - 7 = -4$. Then, substituting $x=-4$ in $x+e=7$, we obtain $e=11$."}

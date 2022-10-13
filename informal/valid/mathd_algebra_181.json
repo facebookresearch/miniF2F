@@ -1,0 +1,1 @@
+{"problem_name": "mathd_algebra_181", "informal_statement": "If $\\displaystyle\\frac{n+5}{n-3} = 2$ what is the value of $n$? Show that it is 11.", "informal_proof": "Multiplying both sides by $n-3$, we have $n+5 = 2(n-3)$.  Expanding gives $n+5 = 2n - 6$, and solving this equation gives $n=11$."}

@@ -1,0 +1,1 @@
+{"problem_name": "numbertheory_2dvd4expn", "informal_statement": "Show that for any positive integer $n$, $2$ divides $4^n$.", "informal_proof": "We have $4^n = (2^2)^n = 2^{2n}$. Since $n > 0$ we have that $2n > 0$, so $2$ divides $4^n$."}

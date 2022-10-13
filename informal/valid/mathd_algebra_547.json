@@ -1,0 +1,1 @@
+{"problem_name": "mathd_algebra_547", "informal_statement": "What is the positive value of the expression $\\sqrt{x^3 - 2^y}$ when $x = 5$ and $y = 2$? Show that it is 11.", "informal_proof": "Plugging in, the desired expression is just $\\sqrt{5^3 - 2^2} = \\sqrt{125 - 4} = \\sqrt{121} = 11$."}

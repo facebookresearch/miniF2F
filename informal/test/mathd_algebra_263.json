@@ -1,0 +1,1 @@
+{"problem_name": "mathd_algebra_263", "informal_statement": "Find $y$: $\\sqrt{19+3y} = 7$. Show that it is 10.", "informal_proof": "Squaring both sides of this equation, we have that $19+3y=49$. Now, we subtract $19$ from both sides of the equation and then divide by $3$ to get that $3y = 30 \\Rightarrow y = 10$."}

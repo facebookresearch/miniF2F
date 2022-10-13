@@ -1,0 +1,1 @@
+{"problem_name": "mathd_algebra_196", "informal_statement": "Find the sum of all solutions of the equation $|2-x|= 3$. Show that it is 4.", "informal_proof": "In order to have $|2-x| = 3$, we must have $2-x = 3$ or $2-x = -3$.  If $2-x = 3$, then $x=-1$, and if $2-x = -3$, then $x = 5$.  The sum of these solutions is $(-1) + 5 = 4$."}

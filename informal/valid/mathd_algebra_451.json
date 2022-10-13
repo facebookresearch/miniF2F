@@ -1,0 +1,1 @@
+{"problem_name": "mathd_algebra_451", "informal_statement": "Suppose that $g(x)=f^{-1}(x)$. If $g(-15)=0$, $g(0)=3$, $g(3)=9$ and $g(9)=20$, what is $f(f(9))$? Show that it is 0.", "informal_proof": "Since $f$ and $g$ are inverses and $g(3) = 9$, we have $f(9) = 3$, so $f(f(9)) = f(3)$. Similarly, $g(0) = 3$, so $f(3) = 0$."}

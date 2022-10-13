@@ -1,0 +1,1 @@
+{"problem_name": "mathd_numbertheory_81", "informal_statement": "Determine the remainder of 71 (mod 3). Show that it is 2.", "informal_proof": "$71 = 23 \\cdot 3 + 2 \\Rightarrow 71 \\equiv 2 \\pmod{3}$."}

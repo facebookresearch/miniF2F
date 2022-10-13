@@ -1,0 +1,1 @@
+{"problem_name": "mathd_algebra_109", "informal_statement": "The point $(a, b)$ lies on the line with the equation $3x + 2y = 12.$ When $a = 4$, what is the value of $b$? Show that it is 0.", "informal_proof": "We plug in $x = 4$: \\begin{align*}\n3(4) + 2y &= 12\\\\\n12 + 2y &= 12\\\\\ny &= 0.\n\\end{align*}\n\nTherefore, $b = 0$."}

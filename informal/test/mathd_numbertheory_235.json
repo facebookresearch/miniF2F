@@ -1,0 +1,1 @@
+{"problem_name": "mathd_numbertheory_235", "informal_statement": "Find the units digit of $29 \\cdot 79 + 31 \\cdot 81$. Show that it is 2.", "informal_proof": "$9 \\cdot 9 + 1 \\cdot 1 = 81 + 1 = 82$, so the units digit is $2$."}

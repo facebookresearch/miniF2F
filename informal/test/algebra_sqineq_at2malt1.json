@@ -1,0 +1,1 @@
+{"problem_name": "algebra_sqineq_at2malt1", "informal_statement": "Show that for any real number $a$, $a(2-a)\\leq 1$.", "informal_proof": "We have that for any real number $a$, $(a - 1)^2 \\geq 0$. So, $a^2 - 2a + 1 \\geq 0$. As a result, $a(2-a) = 2a - a^2 \\leq 1$."}

@@ -1,0 +1,1 @@
+{"problem_name": "mathd_numbertheory_739", "informal_statement": "For each positive integer $n$, let $n!$ denote the product $1\\cdot 2\\cdot 3\\cdot\\,\\cdots\\,\\cdot (n-1)\\cdot n$.\n\nWhat is the remainder when $9!$ is divided by $10$? Show that it is 0.", "informal_proof": "Notice that $10=2\\cdot 5$. Both are factors of $9!$, so the remainder is $0$."}

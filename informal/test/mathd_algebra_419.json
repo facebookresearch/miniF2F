@@ -1,0 +1,1 @@
+{"problem_name": "mathd_algebra_419", "informal_statement": "What is the value of $-a-b^2+3ab$ if $a=-1$ and $b=5$? Show that it is -39.", "informal_proof": "Plugging in the given values yields $-a-b^2+3ab=-(-1)-5^2+3(-1)(5)=1-25-15=-39$."}

@@ -1,0 +1,1 @@
+{"problem_name": "mathd_algebra_480", "informal_statement": "Let \\[f(x) = \\begin{cases}\n-x^2 - 1 &\\text{if }x<0, \\\\\n2&\\text{if }0 \\le x< 4, \\\\\n\\sqrt{x}&\\text{if }x \\ge 4.\n\\end{cases}\n\\]Find $f(\\pi)$. Show that it is 2.", "informal_proof": "Since $\\pi$ is about 3.14, we use the second case, so $f(\\pi) = 2$."}

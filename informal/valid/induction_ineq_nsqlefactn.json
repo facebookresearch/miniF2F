@@ -1,0 +1,1 @@
+{"problem_name": "induction_ineq_nsqlefactn", "informal_statement": "Show that for any integer $n \\geq 4$, we have $n^2 \\leq n!$.", "informal_proof": "First, we observe that $n \\leq (n-1)(n-2)$ as $n^2 - 4n + 2$ is positive for $n \\geq 4$.\nAs a result, $(n-1)! \\geq (n-1) (n-2) \\geq n$. By multiplying by $n$ on each side, we get $n! \\geq n^2$."}

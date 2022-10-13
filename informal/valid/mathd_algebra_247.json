@@ -1,0 +1,1 @@
+{"problem_name": "mathd_algebra_247", "informal_statement": "Let $t=2s-s^2$ and $s=n^2 - 2^n+1$. What is the value of $t$ when $n=3$? Show that it is 0.", "informal_proof": "First substitute $n=3$ into the expression for $s$ to find $s=3^2 - 2^3 + 1 = 9-8+1=2$.  Then substitute $s=2$ into the expression for $t$ to find $t=2(2) - 2^2 =0$."}

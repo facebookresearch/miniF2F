@@ -1,0 +1,1 @@
+{"problem_name": "algebra_manipexpr_2erprsqpesqeqnrpnesq", "informal_statement": "Show that for any two complex numbers e and r, $2er + e^2 + r^2 = (-r + (-e))^2$.", "informal_proof": "Developing the square, we get $(-r + (-e))^2 = (-r)^2 + 2 (-r)(-e) + (-e)^2 = 2er + e^2 + r^2$"}

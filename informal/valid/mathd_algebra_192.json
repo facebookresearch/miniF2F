@@ -1,0 +1,1 @@
+{"problem_name": "mathd_algebra_192", "informal_statement": "If $Q = 11-5i$, $E = 11+5i$, and $D = 2i$, find $Q\\cdot E \\cdot D$. Show that it is 292i.", "informal_proof": "\\begin{align*}\nQED &= (11-5i)(11+5i)2i\\\\\n&=2i(121-(5i)^2)\\\\\n&=2i(121+25)\\\\\n&=292i.\n\\end{align*}"}

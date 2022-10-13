@@ -1,0 +1,1 @@
+{"problem_name": "mathd_algebra_432", "informal_statement": "Expand $(x+3)(2x-6)$. Show that it is 2x^2-18.", "informal_proof": "Factoring a $2$ out of the second term gives $2(x+3)(x-3)=2(x^2-3^2)=2x^2-18$."}

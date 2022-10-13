@@ -1,0 +1,1 @@
+{"problem_name": "imo_1964_p1_2", "informal_statement": "Show that for any natural number $n$, $7$ does not divide $2^n + 1$.\n", "informal_proof": "If $2^n+1$ is congruent to 0 mod 7, then $2^n$ must be congruent to 6 mod 7, but this is not possible due to how $2^n$ mod 7 cycles. Therefore, there is no solution."}

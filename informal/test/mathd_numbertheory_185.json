@@ -1,0 +1,1 @@
+{"problem_name": "mathd_numbertheory_185", "informal_statement": "When a number is divided by 5, the remainder is 3. What is the remainder when twice the number is divided by 5? Show that it is 1.", "informal_proof": "If our number is $n$, then $n\\equiv 3\\pmod5$.  This tells us that  \\[2n=n+n\\equiv 3+3\\equiv1\\pmod5.\\] The remainder is $1$ when the number is divided by 5."}

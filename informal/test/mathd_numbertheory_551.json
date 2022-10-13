@@ -1,0 +1,1 @@
+{"problem_name": "mathd_numbertheory_551", "informal_statement": "Determine the remainder of 1529 (mod 6). Show that it is 5.", "informal_proof": "$1529 = 254 \\cdot 6 + 5 \\Rightarrow 1529 \\equiv 5 \\pmod{6}$."}

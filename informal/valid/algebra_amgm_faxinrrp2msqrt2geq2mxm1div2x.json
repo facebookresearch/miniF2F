@@ -1,0 +1,1 @@
+{"problem_name": "algebra_amgm_faxinrrp2msqrt2geq2mxm1div2x", "informal_statement": "Let $x$ be a positive real number. Show that $2 - \\sqrt{2} \\geq 2 - x - \\frac{1}{2x}$.", "informal_proof": "The statement is equivalent to showing $x+\\frac{1}{2x} \\geq \\sqrt{2}$. By AM-GM, $x + \\frac{1}{2x} \\geq 2\\sqrt{\\frac{x}{2x}} = \\sqrt{2}.$"}

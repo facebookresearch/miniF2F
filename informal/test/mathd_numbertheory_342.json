@@ -1,0 +1,1 @@
+{"problem_name": "mathd_numbertheory_342", "informal_statement": "Determine the remainder of 54 (mod 6). Show that it is 0.", "informal_proof": "$54 = 9 \\cdot 6 + 0 \\Rightarrow 54 \\equiv 0 \\pmod{6}$."}

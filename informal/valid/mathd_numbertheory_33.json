@@ -1,0 +1,1 @@
+{"problem_name": "mathd_numbertheory_33", "informal_statement": "Find an integer $n$ such that $0\\leq n<398$ and $n$ is a multiplicative inverse to 7 modulo 398. Show that it is 57.", "informal_proof": "We notice that 399 is a multiple of 7: \\[399=57\\cdot7.\\]Considering this equation modulo 398 gives \\[1\\equiv57\\cdot7\\pmod{398}\\]so the answer is $57$."}

@@ -1,0 +1,1 @@
+{"problem_name": "algebra_2complexrootspoly_xsqp49eqxp7itxpn7i", "informal_statement": "Show that for any complex number $x$, $x^2 + 49 = (x + 7i)(x - 7i)$.", "informal_proof": "We have that $(x + 7i)(x - 7i) = x^2 + 7ix - 7ix - (7i)^2 = x^2 - 49 i^2$.\nSince $i^2=-1$, we have $(x + 7i)(x - 7i) = x^2+49$."}

@@ -1,0 +1,1 @@
+{"problem_name": "mathd_algebra_31", "informal_statement": "If $ \\sqrt{x+\\!\\sqrt{x+\\!\\sqrt{x+\\!\\sqrt{x+\\cdots}}}}=9$, find $x$. Show that it is 72.", "informal_proof": "We know that $ \\sqrt{x+\\!\\sqrt{x+\\!\\sqrt{x+\\!\\sqrt{x+\\cdots}}}}=9$, so $\\sqrt{x+9}=9$. Squaring both sides we get $x+9=81$, so $x=81-9=72$."}

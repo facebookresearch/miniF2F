@@ -1,0 +1,1 @@
+{"problem_name": "mathd_algebra_433", "informal_statement": "Let $f(x) = 3\\sqrt{2x - 7} - 8$.  Find $f(8)$. Show that it is 1.", "informal_proof": "$f(8) = 3\\sqrt{2\\cdot 8 - 7} - 8 = 3\\sqrt{9} - 8 =1$."}

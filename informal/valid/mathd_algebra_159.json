@@ -1,0 +1,1 @@
+{"problem_name": "mathd_algebra_159", "informal_statement": "Let $f(x)=3x^4-7x^3+2x^2-bx+1$. For what value of $b$ is $f(1)=1$? Show that it is -2.", "informal_proof": "Evaluating, we get $f(1) = 3-7+2-b+1 = -b-1 = 1.$ Solving for $b,$ we find that $b = -2.$"}

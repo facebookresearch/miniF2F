@@ -1,0 +1,1 @@
+{"problem_name": "mathd_algebra_22", "informal_statement": "Evaluate $\\log_{5^2}5^4$. Show that it is 2.", "informal_proof": "Let $x=\\log_{5^2}5^4$. Writing the equation in exponential form gives $(5^2)^x=5^4$. So, $x=2$."}
