@@ -403,11 +403,37 @@ begin
   sorry
 end
 
-theorem numbertheory_notequiv2i2jasqbsqdiv8
-  (a b : ℤ) :
-  ¬ ((∃ i j, a = 2*i ∧ b=2*j) ↔ (∃ k, a^2 + b^2 = 8*k)) :=
+theorem numbertheory_notequiv2i2jasqbsqdiv8 :
+  ¬ (∀ a b : ℤ, (∃ i j, a = 2*i ∧ b=2*j) ↔ (∃ k, a^2 + b^2 = 8*k)) :=
 begin
-  sorry
+  refine not_forall_of_exists_not _,
+  use 2,
+  refine not_forall_of_exists_not _,
+  use 4,
+  refine not_iff.mpr _,
+  refine iff.symm _,
+  apply iff_not_comm.mpr,
+  refine iff_of_true _ _,
+  {
+    use 1,
+    use 2,
+    norm_num,
+  },
+  {
+    norm_num,
+    intro k,
+    refine ne_comm.mp _,
+    apply ne_iff_lt_or_gt.mpr,
+    by_cases k ≤ 2,
+    {
+      left,
+      linarith,
+    },
+    {
+      right,
+      linarith,
+    },
+  },
 end
 
 theorem mathd_algebra_156
