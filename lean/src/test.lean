@@ -728,9 +728,9 @@ begin
 end
 
 theorem mathd_numbertheory_728 :
-  (29^13 - 5^13) % 7 = 0 :=
+  (29^13 - 5^13) % 7 = 3 :=
 begin
-  sorry
+  norm_num,
 end
 
 theorem mathd_algebra_184

@@ -8,7 +8,7 @@ theory mathd_numbertheory_728 imports
 begin
 
 theorem mathd_numbertheory_728:
-  "(29^13 - 5^13) mod 7 = (0::nat)"
+  "(29^13 - 5^13) mod 7 = (3::nat)"
   sorry 
 
 end
