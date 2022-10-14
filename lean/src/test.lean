@@ -851,7 +851,7 @@ theorem mathd_algebra_452
   (h₂ : a 9 = 4 / 5) :
   a 5 = 11 / 15 :=
 begin
-  sorry
+  linarith[h₀ 1, h₀ 2, h₀ 3, h₀ 4, h₀ 5, h₀ 6, h₀ 7],
 end
 
 theorem mathd_numbertheory_5
