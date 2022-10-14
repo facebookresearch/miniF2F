@@ -8,6 +8,7 @@ $(
     mathd-algebra-487.5 @e |- ( ph -> ( A + B ) = 1 ) $@
     mathd-algebra-487.6 @e |- ( ph -> D = ( C ^ 2 ) ) $@
     mathd-algebra-487.7 @e |- ( ph -> ( C + D ) = 1 ) $@
+    mathd-algebra-487.8 @e |- ( ph -> A =/= C ) $@
     @( (Contributed by Kunhao Zheng, 31-May-2021.) @)
     mathd-algebra-487 @p |- ( ph -> ( sqrt ` ( ( ( A - C ) ^ 2 ) + ( ( B - D ) ^ 2 ) ) ) = ( sqrt ` ; 1 0 ) ) @=
       ? @.
