@@ -2332,7 +2332,7 @@ theorem mathd_algebra_288
   (x y : ℝ)
   (n : nnreal)
   (h₀ : x < 0 ∧ y < 0)
-  (h₁ : abs x = 6)
+  (h₁ : abs y = 6)
   (h₂ : real.sqrt ((x - 8)^2 + (y - 3)^2) = 15)
   (h₃ : real.sqrt (x^2 + y^2) = real.sqrt n) :
   n = 52 :=
