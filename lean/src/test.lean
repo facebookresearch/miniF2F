@@ -1805,12 +1805,28 @@ begin
 end
 
 theorem mathd_algebra_332
-  (x y : nnreal)
+  (x y : ℝ)
   (h₀ : (x + y) / 2 = 7)
   (h₁ : real.sqrt (x * y) = real.sqrt 19) :
-  x^2 * y^2 = 158 :=
+  x^2 + y^2 = 158 :=
 begin
-  sorry
+  have h₂ : (x + y)^2 = 14^2, {
+    suffices: (x + y) = 14, rw this,
+    linarith,
+  },
+  have key: 0 < real.sqrt 19, norm_num,
+  have h₃ := (@real.sqrt_eq_iff_sq_eq (x * y) (real.sqrt 19) _ _).mp h₁,
+  {
+    rw real.sq_sqrt _ at h₃,
+    { linarith },
+    { norm_num },
+  },
+  {
+    refine le_of_lt _,
+    apply real.sqrt_pos.mp,
+    rwa h₁,
+  },
+  exact le_of_lt key,
 end
 
 theorem algebra_cubrtrp1oncubrtreq3_rcubp1onrcubeq5778
