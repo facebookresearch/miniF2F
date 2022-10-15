@@ -6,6 +6,7 @@ $(
     mathd-algebra-320.3 @e |- ( ph -> C e. NN ) $@
     mathd-algebra-320.4 @e |- ( ph -> ( 2 x. ( X ^ 2 ) ) = ( ( 4 x. X ) + 9 ) ) $@
     mathd-algebra-320.5 @e |- ( ph -> X = ( ( A + ( sqrt ` B ) ) / C ) ) $@
+    mathd-algebra-320.6 @e |- ( ph -> C = 2 ) $@
     @( (Contributed by Kunhao Zheng, 31-May-2021.) @)
     mathd-algebra-320 @p |- ( ph -> ( ( A + B ) + C ) = ; 2 6 ) @=
       ? @.

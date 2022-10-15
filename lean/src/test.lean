@@ -301,11 +301,12 @@ begin
 end
 
 theorem mathd_algebra_320
-  (x : nnreal)
+  (x : ℝ)
   (a b c : ℕ)
-  (h₀ : 0 < a ∧ 0 < b ∧ 0 < c)
+  (h₀ : 0 < a ∧ 0 < b ∧ 0 < c ∧ 0 ≤ x)
   (h₁ : 2 * x^2 = 4 * x + 9)
-  (h₂ : x = (a + nnreal.sqrt b) / c) :
+  (h₂ : x = (a + real.sqrt b) / c)
+  (h₃ : c = 2) :
   a + b + c = 26 :=
 begin
   sorry
