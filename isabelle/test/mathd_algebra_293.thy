@@ -8,7 +8,8 @@ theory mathd_algebra_293
 begin
 
 theorem mathd_algebra_293:
-  fixes x :: real 
+  fixes x :: real
+  assumes "0 \<le> x"
   shows "sqrt (60 * x) * sqrt (12 * x) * sqrt (63 * x) 
                 = 36 * x * sqrt (35 * x)"
   sorry

@@ -1842,7 +1842,23 @@ theorem mathd_algebra_293
   (x : nnreal) :
   real.sqrt (60 * x) * real.sqrt (12 * x) * real.sqrt (63 * x) = 36 * x * real.sqrt (35 * x) :=
 begin
-  sorry
+  have h₀ := nnreal.coe_nonneg x,
+  have h₁ := nnreal.coe_nonneg (60 * x),
+  have h₂ := nnreal.coe_nonneg (12 * x),
+  have h₃ := nnreal.coe_nonneg (63 * x),
+  have h₄ := nnreal.coe_nonneg (35 * x),
+  have h₅ := nnreal.coe_nonneg (36 * x),
+  simp only [nonneg.coe_mul, nnreal.coe_bit0, nnreal.coe_bit1, nonneg.coe_one] at h₁ h₂ h₃ h₄ h₅,
+  have h₆ := sq_nonneg ((36:ℝ) * ↑x),
+  rw [←real.sqrt_sq h₅],
+  rw [←real.sqrt_mul', ←real.sqrt_mul', ←real.sqrt_mul'],
+  {
+    refine (real.sqrt_inj _ _).mpr _,
+    { apply mul_nonneg; apply mul_nonneg; linarith },      
+    { apply mul_nonneg; linarith },
+    ring_nf,
+  },
+  all_goals { linarith },
 end
 
 theorem mathd_algebra_440
