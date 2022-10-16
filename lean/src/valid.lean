@@ -1457,10 +1457,10 @@ begin
   sorry
 end
 
-theorem amc12a_2020_p22
+theorem amc12a_2020_p21
   (S : finset ℕ)
   (h₀ : ∀ (n : ℕ), n ∈ S ↔ 5 ∣ n ∧ nat.lcm 5! n = 5 * nat.gcd 10! n) :
-  S.card = 1 :=
+  S.card = 48 :=
 begin
   sorry
 end
