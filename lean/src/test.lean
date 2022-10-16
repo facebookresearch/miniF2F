@@ -1224,9 +1224,109 @@ end
 theorem mathd_algebra_276
   (a b : ℤ)
   (h₀ : ∀ x : ℝ, 10 * x^2 - x - 24 = (a * x - 8) * (b * x + 3)) :
-  a + b = 12 :=
+  a * b + b = 12 :=
 begin
-  sorry
+  have h₁ := h₀ 1,
+  have h₂ := h₀ (-1),
+  ring_nf at h₁ h₂,
+  have h₃ : (-13:ℝ) + (-15:ℝ) = ((↑b - 3) * ↑a + (8 * ↑b - 24)) + ((↑b + 3) * ↑a + (-(8 * ↑b) - 24)), {
+    refine congr (congr _ _) _,
+    { refl },
+    { exact h₂ },
+    { exact h₁ },
+  },
+  ring_nf at h₃,
+  have h₄ : ↑a * ↑b = (10:ℝ), linarith,
+  rw [sub_mul, mul_comm, h₄] at h₂,
+  rw [add_mul, mul_comm, h₄] at h₁,
+  have h₆ : (8:ℝ) * ↑b - 3 * ↑a = 1, linarith,
+  norm_cast at h₆,
+  norm_cast at h₄,
+  clear h₀ h₁ h₂ h₃,
+  suffices l₀ : b = 2, {
+    rw l₀,
+    linarith,
+  },
+  have h₇ := dvd.intro_left a h₄,
+  have h₈ : ∀ n : ℤ, n ∣ 10 ↔ n = 1 ∨ n = 2 ∨ n = 5 ∨ n = 10 ∨ n = -1 ∨ n = -2 ∨ n = -5 ∨ n = -10, {
+    intros n,
+    have coe := @int.coe_nat_dvd_right 10 n,
+    norm_cast at coe,
+    rw coe,
+    have h_div : nat.divisors 10 = ⟨quot.mk _ [1, 2, 5, 10], _⟩ := rfl,
+    rw [← nat.mem_divisors.trans (and_iff_left (by norm_num : 10 ≠ 0)), h_div],
+    change n.nat_abs ∈ (_:list _) ↔ _,
+    simp only [list.mem_cons_iff, list.mem_singleton, int.nat_abs_eq_iff, int.coe_nat_succ, int.coe_nat_zero, zero_add,
+  int.coe_nat_bit0, int.coe_nat_bit1],
+    finish,
+  },
+  have h₉ := (h₈ b).mp h₇,
+  clear h₈,
+  cases h₉, 
+  {
+    rw h₉ at h₄ h₆,
+    norm_num at h₆ h₄,
+    rw h₄ at h₆,
+    contradiction,    
+  },
+  {
+    cases h₉,
+    { exact h₉ },
+    { cases h₉, 
+      {
+        rw h₉ at h₄ h₆,
+        norm_num at h₆ h₄,
+        have a_val: a = 2, linarith,
+        rw a_val at h₆,
+        norm_num at h₆,
+      },
+      cases h₉,
+      {
+        rw h₉ at h₄ h₆,
+        norm_num at h₆ h₄,
+        have a_val: a = 1, linarith,
+        rw a_val at h₆,
+        norm_num at h₆,
+      },
+      { 
+        cases h₉,
+        {
+          rw h₉ at h₄ h₆,
+          norm_num at h₆ h₄,
+          have a_val: a = -1, linarith,
+          rw a_val at h₆,
+          norm_num at h₆,
+        },
+        {
+          cases h₉,
+          {
+            rw h₉ at h₄ h₆,
+            norm_num at h₆ h₄,
+            have a_val: a = -2, linarith,
+            rw a_val at h₆,
+            norm_num at h₆,
+          },
+          {
+            cases h₉,
+            {
+              rw h₉ at h₄ h₆,
+              norm_num at h₆ h₄,
+              have a_val: a = -5, linarith,
+              rw a_val at h₆,
+              norm_num at h₆,
+            },
+            {
+              rw h₉ at h₄ h₆,
+              norm_num at h₆ h₄,
+              have a_val: a = -10, linarith,
+              rw a_val at h₆,
+              norm_num at h₆,
+            },
+          },
+        },
+      },
+    },
+  },
 end
 
 theorem amc12a_2021_p14 :
