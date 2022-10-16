@@ -1768,7 +1768,33 @@ theorem amc12a_2010_p10
   (h₄ : a 4 = 3 * p + q) :
   a 2010 = 8041 :=
 begin
-  sorry
+  have h₅ := h₀ 1,
+  have h₆ := h₀ 2, 
+  have p_val: p = 5, linarith,
+  have q_val: q = 2, linarith,
+  have l₀ : ∀ n ≥ 1, a (n + 1) - a n = 4, {
+    apply nat.le_induction,
+    { linarith },
+    { intros n h hn,
+      have h₇ := h₀ n,
+      linarith,
+    },
+  },
+  have l₁ : ∀ n ≥ 1, a n = 5 + 4 * (n - 1), {
+    apply nat.le_induction,
+    { norm_cast, linarith, },
+    { intros n h hn,
+      have h₇ := l₀ n h,
+      have h₈ : a (n + 1) = a n + 4, linarith,
+      rw [h₈, hn],
+      ring_nf,
+      norm_cast,
+    },
+  },
+  have l₃ := l₁ 2010 (by norm_num),
+  rw l₃,
+  norm_cast,
+  norm_num,
 end
 
 theorem mathd_algebra_509 :
