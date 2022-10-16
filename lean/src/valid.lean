@@ -814,8 +814,8 @@ end
 theorem imo_1978_p5
   (n : ℕ)
   (a : ℕ → ℕ)
-  (h₀ : ∀ (m : ℕ), 0 < a m)
-  (h₁ : ∀ (p q : ℕ), p ≠ q → a p ≠ a q)
+  (h₀ : function.injective a)
+  (h₁ : a 0 = 0)
   (h₂ : 0 < n) :
   (∑ k in finset.Icc 1 n, (1 : ℝ)/k) ≤ ∑ k in finset.Icc 1 n, (a k)/k^2 :=
 begin
