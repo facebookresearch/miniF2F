@@ -60,7 +60,8 @@ then in the directory where you want the project installed run:
 git clone https://github.com/openai/miniF2F
 cd miniF2F
 leanpkg configure
-leanpkg build
+leanproject get-mathlib-cache
+leanproject build
 ```
 
 Since having one file per statement causes slowness in Lean parsing stage, all Lean statements are
