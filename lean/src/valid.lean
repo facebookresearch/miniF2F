@@ -1777,7 +1777,7 @@ theorem amc12a_2010_p10
   a 2010 = 8041 :=
 begin
   have h₅ := h₀ 1,
-  have h₆ := h₀ 2, 
+  have h₆ := h₀ 2,
   have p_val: p = 5, linarith,
   have q_val: q = 2, linarith,
   have l₀ : ∀ n ≥ 1, a (n + 1) - a n = 4, {

@@ -1267,17 +1267,17 @@ begin
   },
   have h₉ := (h₈ b).mp h₇,
   clear h₈,
-  cases h₉, 
+  cases h₉,
   {
     rw h₉ at h₄ h₆,
     norm_num at h₆ h₄,
     rw h₄ at h₆,
-    contradiction,    
+    contradiction,
   },
   {
     cases h₉,
     { exact h₉ },
-    { cases h₉, 
+    { cases h₉,
       {
         rw h₉ at h₄ h₆,
         norm_num at h₆ h₄,
@@ -1293,7 +1293,7 @@ begin
         rw a_val at h₆,
         norm_num at h₆,
       },
-      { 
+      {
         cases h₉,
         {
           rw h₉ at h₄ h₆,
@@ -1599,7 +1599,7 @@ theorem induction_pprime_pdvdapowpma
   (h₁ : nat.prime p) :
   p ∣ (a^p - a) :=
 begin
-  sorry,
+  sorry
 end
 
 theorem amc12a_2021_p9 :
@@ -2010,7 +2010,7 @@ begin
   rw [←real.sqrt_mul', ←real.sqrt_mul', ←real.sqrt_mul'],
   {
     refine (real.sqrt_inj _ _).mpr _,
-    { apply mul_nonneg; apply mul_nonneg; linarith },      
+    { apply mul_nonneg; apply mul_nonneg; linarith },
     { apply mul_nonneg; linarith },
     ring_nf,
   },

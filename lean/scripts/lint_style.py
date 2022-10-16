@@ -4,8 +4,7 @@ Lint a file or files from mathlib for style.
 
 Sample usage:
     under the folder of miniF2F/lean
-    $ python ./scripts/lint_style.py $(find src/test -name '*.lean')
-    $ python ./scripts/lint_style.py $(find src/valid -name '*.lean')
+    $ python ./scripts/lint_style.py $(find src -name '*.lean')
 
 which will lint all of the Lean files in the specified directories.
 
