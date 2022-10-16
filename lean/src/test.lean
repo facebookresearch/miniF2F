@@ -1400,7 +1400,58 @@ theorem mathd_algebra_17
   (h₀ : real.sqrt (4 + real.sqrt (16 + 16 * a)) + real.sqrt (1 + real.sqrt (1 + a)) = 6) :
   a = 8 :=
 begin
-  sorry
+  have sq_4 : (4 = real.sqrt 16), {
+    have h₃ : (16:ℝ) = 4^2, norm_num,
+    simp only [h₃, real.sqrt_sq, zero_le_bit0, zero_le_one],
+  },
+  have sq_3 : (3 = real.sqrt 9), {
+    have h₃ : (9:ℝ) = 3^2, norm_num,
+    have h₄ : (0:ℝ) ≤ 3, norm_num,
+    simp only [h₃, h₄, real.sqrt_sq],
+  },
+  have h₁ : real.sqrt (16 + 16 * a) = 4 * real.sqrt (1 + a), {
+    calc real.sqrt (16 + 16 * a) = real.sqrt (16 * (1 + a)): by { refine congr_arg real.sqrt _, ring_nf, }
+      ... = real.sqrt (16) * real.sqrt (1 + a): by { rw real.sqrt_mul, norm_num, }
+      ... = 4 * real.sqrt (1 + a): by { rw ←sq_4, },
+  },
+  rw h₁ at h₀,
+  let u := real.sqrt (1 + a),
+  change real.sqrt (1 + a) with u at h₀,
+  have sq_2 : (2 = real.sqrt 4), {
+    have h₄ : (4:ℝ) = 2^2, norm_num,
+    simp only [h₄, real.sqrt_sq, zero_le_bit0, zero_le_one],
+  },
+  have h₂ : real.sqrt (4 + 4 * u) = 2 * real.sqrt (1 + u), {
+    calc real.sqrt (4 + 4 * u) = real.sqrt (4 * (1 + u)): by { refine congr_arg real.sqrt _, ring_nf, }
+      ... = real.sqrt (4) * real.sqrt (1 + u): by { rw real.sqrt_mul, norm_num, }
+      ... = 2 * real.sqrt (1 + u): by { rw ←sq_2, },
+  },
+  rw h₂ at h₀,
+  let v:= real.sqrt (1 + u),
+  change real.sqrt (1 + u) with v at h₀,
+  have v_val: v = 2, linarith,
+  have u_val: u = 3, {
+    dsimp only [v] at v_val,
+    rw sq_2 at v_val,
+    have p₀ : (0:ℝ) < 4, norm_num,
+    have p₁ := le_of_lt p₀,
+    have p₃ := real.sqrt_pos.mpr p₀,
+    rw ←v_val at p₃,
+    have p₂ := real.sqrt_pos.mp p₃,
+    have p₄ := le_of_lt p₂,
+    simp only [p₁, p₄, real.sqrt_inj] at v_val,
+    linarith,
+  },
+  dsimp only [u] at u_val,
+  rw sq_3 at u_val,
+  have p₀ : (0:ℝ) < 9, norm_num,
+  have p₁ := le_of_lt p₀,
+  have p₃ := real.sqrt_pos.mpr p₀,
+  rw ←u_val at p₃,
+  have p₂ := real.sqrt_pos.mp p₃,
+  have p₄ := le_of_lt p₂,
+  simp only [p₁, p₄, real.sqrt_inj] at u_val,
+  linarith,
 end
 
 theorem mathd_algebra_153
