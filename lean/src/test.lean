@@ -1173,7 +1173,12 @@ theorem amc12b_2021_p4
   (h₁ : ↑m / ↑a = (3:ℝ) / 4) :
   (84 * ↑m + 70 * ↑a) / (↑m + ↑a) = (76:ℝ) :=
 begin
-  sorry
+  have h₂ : (a:ℝ) ≠ 0, { norm_cast, linarith },
+  calc ((84:ℝ) * ↑m + 70 * ↑a) / (↑m + ↑a) = ((84 * ↑m + 70 * ↑a) / ↑a) / ((↑m + ↑a) / ↑a) : by { rw ←div_div_div_cancel_right (84 * ↑m + 70 * ↑a) h₂, }
+    ... = (84 * ↑m / ↑a + 70 * ↑a / ↑a) / (↑m / ↑a + ↑a / ↑a) : by { repeat {rw [←div_add_div_same]}, }
+    ... = (84 * (↑m / ↑a) + 70) / (↑m / ↑a + 1) : by { simp only [mul_div_assoc, div_self h₂, mul_one], }
+    ... = (84 * (3 / 4) + 70) / (3 / 4 + 1) : by { rw h₁, }
+    ... = (76:ℝ) : by { norm_num },
 end
 
 theorem imo_1962_p2
@@ -2515,7 +2520,7 @@ end
 
 theorem imo_1974_p3
   (n : ℕ) :
-  ¬ 5∣∑ k in finset.range n, (nat.choose (2 * n + 1) (2 * k + 1)) * (2^(3 * k)) :=
+  ¬ 5∣∑ k in finset.range (n + 1), (nat.choose (2 * n + 1) (2 * k + 1)) * (2^(3 * k)) :=
 begin
   sorry
 end
