@@ -1543,7 +1543,13 @@ theorem mathd_algebra_451
   (h₃ : σ.2 9 = 20) :
   σ.1 (σ.1 9) = 0 :=
 begin
-  sorry
+  simp only [equiv.inv_fun_as_coe, eq_comm] at h₀ h₁ h₂ h₃,
+  simp only [equiv.to_fun_as_coe],
+  rw ←equiv.apply_eq_iff_eq_symm_apply σ at h₂,
+  rw ←equiv.apply_eq_iff_eq_symm_apply σ at h₁,
+  have h₄ := (equiv.apply_eq_iff_eq σ).mpr h₂,
+  rw h₁ at h₄,
+  exact h₄,
 end
 
 theorem mathd_algebra_144
