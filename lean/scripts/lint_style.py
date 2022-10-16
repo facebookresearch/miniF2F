@@ -1,4 +1,12 @@
 #!/usr/bin/env python3
+
+# Copyright (c) 2022-present, Facebook, Inc.
+# All rights reserved.
+#
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+#
+
 """
 Lint a file or files from mathlib for style.
 
@@ -48,7 +56,7 @@ exceptions = []
 
 SCRIPTS_DIR = Path(__file__).parent.resolve()
 ROOT_DIR = SCRIPTS_DIR.parent
-RESERVED_NOTATION = ROOT_DIR / 'src/tactic/reserved_notation.lean'
+RESERVED_NOTATION = ROOT_DIR / "src/tactic/reserved_notation.lean"
 
 new_exceptions = False
 
@@ -80,12 +88,12 @@ def skip_string(enumerate_lines):
         if not in_comment:
             # crude heuristic: if the number of non-escaped quote signs is odd,
             # we're starting / ending a string literal
-            if line.count("\"") - line.count("\\\"") % 2 == 1:
+            if line.count('"') - line.count('\\"') % 2 == 1:
                 in_string = not in_string
             # if there are quote signs in this line,
             # a string literal probably begins and / or ends here,
             # so we skip this line
-            if line.count("\"") > 0:
+            if line.count('"') > 0:
                 continue
             if in_string:
                 continue
@@ -95,7 +103,7 @@ def skip_string(enumerate_lines):
 def small_alpha_vrachy_check(lines, path):
     errors = []
     for line_nr, line in skip_string(skip_comments(enumerate(lines, 1))):
-        if 'ᾰ' in line:
+        if "ᾰ" in line:
             errors += [(ERR_SAV, line_nr, path)]
     return errors
 
@@ -105,7 +113,7 @@ def reserved_notation_check(lines, path):
         return []
     errors = []
     for line_nr, line in skip_string(skip_comments(enumerate(lines, 1))):
-        if line.startswith('reserve') or line.startswith('precedence'):
+        if line.startswith("reserve") or line.startswith("precedence"):
             errors += [(ERR_RNT, line_nr, path)]
     return errors
 
@@ -113,10 +121,14 @@ def reserved_notation_check(lines, path):
 def set_option_check(lines, path):
     errors = []
     for line_nr, line in skip_string(skip_comments(enumerate(lines, 1))):
-        if line.startswith('set_option'):
-            next_two_chars = line.split(' ')[1][:2]
+        if line.startswith("set_option"):
+            next_two_chars = line.split(" ")[1][:2]
             # forbidden options: pp, profiler, trace
-            if next_two_chars == 'pp' or next_two_chars == 'pr' or next_two_chars == 'tr':
+            if (
+                next_two_chars == "pp"
+                or next_two_chars == "pr"
+                or next_two_chars == "tr"
+            ):
                 errors += [(ERR_OPT, line_nr, path)]
     return errors
 
@@ -135,7 +147,7 @@ def long_lines_check(lines, path):
 def tailing_space_check(lines, path):
     errors = []
     for line_nr, line in enumerate(lines, 1):
-        if line.endswith(' \n'):
+        if line.endswith(" \n"):
             errors += [(ERR_TSP, line_nr, path)]
     return errors
 
@@ -202,15 +214,19 @@ def regular_check(lines, path):
                 # Validating names is not a reasonable thing to do,
                 # so we just look for the two common variations:
                 # using ' and ' between names, and a '.' at the end of line.
-                if ((not line.startswith("Authors: ")) or
-                    ("  " in line) or
-                    (" and " in line) or
-                        (line[-2] == '.')):
+                if (
+                    (not line.startswith("Authors: "))
+                    or ("  " in line)
+                    or (" and " in line)
+                    or (line[-2] == ".")
+                ):
                     errors += [(ERR_AUT, line_nr, path)]
             if line == "-/\n":
-                if ((not "Copyright" in copy_lines) or
-                    (not "Apache" in copy_lines) or
-                        (not "Authors: " in copy_lines)):
+                if (
+                    (not "Copyright" in copy_lines)
+                    or (not "Apache" in copy_lines)
+                    or (not "Authors: " in copy_lines)
+                ):
                     errors += [(ERR_COP, copy_start_line_nr, path)]
                 copy_done = True
             continue
@@ -246,41 +262,49 @@ def format_errors(errors):
             continue
         new_exceptions = True
         if errno == ERR_COP:
-            output_message(path, line_nr, "ERR_COP",
-                           "Malformed or missing copyright header")
+            output_message(
+                path, line_nr, "ERR_COP", "Malformed or missing copyright header"
+            )
         if errno == ERR_IMP:
-            output_message(path, line_nr, "ERR_IMP",
-                           "More than one file imported per line")
+            output_message(
+                path, line_nr, "ERR_IMP", "More than one file imported per line"
+            )
         if errno == ERR_MOD:
-            output_message(path, line_nr, "ERR_MOD",
-                           "Module docstring missing, or too late")
+            output_message(
+                path, line_nr, "ERR_MOD", "Module docstring missing, or too late"
+            )
         if errno == ERR_LIN:
-            output_message(path, line_nr, "ERR_LIN",
-                           "Line has more than 100 characters")
+            output_message(
+                path, line_nr, "ERR_LIN", "Line has more than 100 characters"
+            )
         if errno == ERR_SAV:
-            output_message(path, line_nr, "ERR_SAV",
-                           "File contains the character ᾰ")
+            output_message(path, line_nr, "ERR_SAV", "File contains the character ᾰ")
         if errno == ERR_RNT:
-            output_message(path, line_nr, "ERR_RNT",
-                           "Reserved notation outside tactic.reserved_notation")
+            output_message(
+                path,
+                line_nr,
+                "ERR_RNT",
+                "Reserved notation outside tactic.reserved_notation",
+            )
         if errno == ERR_OPT:
-            output_message(path, line_nr, "ERR_OPT",
-                           "Forbidden set_option command")
+            output_message(path, line_nr, "ERR_OPT", "Forbidden set_option command")
         if errno == ERR_AUT:
-            output_message(path, line_nr, "ERR_AUT",
-                           "Authors line should look like: 'Authors: Jean Dupont, Иван Иванович Иванов'")
+            output_message(
+                path,
+                line_nr,
+                "ERR_AUT",
+                "Authors line should look like: 'Authors: Jean Dupont, Иван Иванович Иванов'",
+            )
         if errno == ERR_TSP:
-            output_message(path, line_nr, "ERR_TSP",
-                           "Tailing space detected")
+            output_message(path, line_nr, "ERR_TSP", "Tailing space detected")
         if errno == ERR_SOR:
-            output_message(path, line_nr, "ERR_SOR",
-                           "Sorry should not be followed by comma")
+            output_message(
+                path, line_nr, "ERR_SOR", "Sorry should not be followed by comma"
+            )
         if errno == ERR_PSP:
-            output_message(path, line_nr, "ERR_PSP",
-                           "'( ' or ' )' detected")
+            output_message(path, line_nr, "ERR_PSP", "'( ' or ' )' detected")
         if errno == ERR_EOF:
-            output_message(path, line_nr, "ERR_EOF",
-                           "missing \\n at the end of file")
+            output_message(path, line_nr, "ERR_EOF", "missing \\n at the end of file")
 
 
 def lint(path):

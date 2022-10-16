@@ -1,20 +1,21 @@
 # MiniF2F
 
+**Note: This repository is a fork of the original OpenAI miniF2F repository [https://github.com/openai/miniF2F](https://github.com/openai/miniF2F), with additional data and many formal statement fixes.**
+
 MiniF2F is a formal mathematics benchmark (translated across multiple formal systems) consisting of
 exercise statements from olympiads (AMC, AIME, IMO) as well as high-school and undergraduate maths
 classes.
 
 The goal of the project is to provide a shared benchmark to evaluate and directly compare automated
-theorem proving systems based on the formal systems targeted, initially **Lean**, and **Metamath**
-(targeting also **Hol Light** and
-**Isabelle**).
+theorem proving systems based on the formal systems targeted, initially **Lean**, **Isabelle**, and **Metamath**
+(targeting also **Hol Light**).
 
 The benchmark (released under permissive licenses (MIT for Metamath, Apache for Lean)) is a work in
 progress and contributions are welcome and encouraged through pull requests.
 
 ## Citation
 
-The benchmark is described in detail in the following [pre-print](https://arxiv.org/abs/2109.00110):
+The initial version of the benchmark is described in detail in the following [pre-print](https://arxiv.org/abs/2109.00110):
 ```
 @article{zheng2021minif2f,
   title={MiniF2F: a cross-system benchmark for formal Olympiad-level mathematics},
@@ -24,6 +25,20 @@ The benchmark is described in detail in the following [pre-print](https://arxiv.
 }
 ```
 
+The original repo is [miniF2F](https://github.com/openai/miniF2F). It has then seen significant fixes and improvements, notably the addition of an informal statement and an informal proof for each problem. The curation of the informal component is described in the following [paper](https://openreview.net/forum?id=SMa9EAovKMC). To cite it:
+```
+@inproceedings{
+  2210.12283,
+  title={Draft, Sketch, and Prove: Guiding Formal Theorem Provers with Informal Proofs},
+  author={Albert Q. Jiang and Sean Welleck and Jin Peng Zhou and Wenda Li and Jiacheng Liu and Mateja Jamnik and Timothée Lacroix and Yuhuai Wu and Guillaume Lample},
+  booktitle={Submitted to The Eleventh International Conference on Learning Representations},
+  year={2022},
+  url={https://arxiv.org/abs/2210.12283}
+}
+```
+
+We decided to start a separate repository, instead of submitting PRs, for better maintainence of the dataset.
+
 ## Statistics
 
 |           | Test | Valid |
@@ -32,6 +47,52 @@ The benchmark is described in detail in the following [pre-print](https://arxiv.
 | Metamath  |  244 |  244  |
 | Isabelle  |  244 |  244  |
 | Hol Light |  165 |  165  |
+| Informal  |  244 |  244  |
+
+
+## Example problem statement (mathd_algebra_17)
+
+#### Informal
+Solve for $a$: $\sqrt{4+\sqrt{16+16a}}+ \sqrt{1+\sqrt{1+a}} = 6.$ Show that it is 8.
+
+#### Lean
+```lean
+theorem mathd_algebra_17
+  (a : ℝ)
+  (h₀ : real.sqrt (4 + real.sqrt (16 + 16 * a)) + real.sqrt (1 + real.sqrt (1 + a)) = 6) :
+  a = 8 :=
+begin
+  sorry
+end
+```
+
+####  Isabelle
+```isabelle
+theorem mathd_algebra_17:
+  fixes a :: real
+  assumes "1 + a>0"
+  assumes "sqrt (4 + sqrt (16 + 16 * a)) 
+    + sqrt (1 + sqrt (1 + a)) = 6" 
+  shows "a = 8"
+  sorry
+```
+
+####  HOL Light
+```ml
+let mathd-algebra-17 = `!a. sqrt (&4 + sqrt (&16 + &16 * a)) + sqrt (&1 + sqrt (&1 + a)) = &6 /\ &0 <= (&1 + a) ==> a = &8`;;
+```
+
+####  Metamath
+```mm
+$(
+  @{
+    mathd-algebra-17.0 @e |- ( ph -> A e. RR ) $@
+    mathd-algebra-17.1 @e |- ( ph -> ( ( sqrt ` ( 4 + ( sqrt ` ( ; 1 6 + ( ; 1 6 x. A ) ) ) ) ) + ( sqrt ` ( 1 + ( sqrt ` ( 1 + A ) ) ) ) ) = 6 ) $@
+    mathd-algebra-17 @p |- ( ph -> A = 8 ) @=
+      ? @.
+  @}
+$)
+```
 
 ## Structure
 
@@ -60,7 +121,8 @@ then in the directory where you want the project installed run:
 git clone https://github.com/openai/miniF2F
 cd miniF2F
 leanpkg configure
-leanpkg build
+leanproject get-mathlib-cache
+leanproject build
 ```
 
 Since having one file per statement causes slowness in Lean parsing stage, all Lean statements are
@@ -93,10 +155,16 @@ The `hollight` folder is released under the FreeBSD License.
 ### Isabelle
 
 Each file contains the problem statement defined as a theorem
-whose name must match the file name, optionally with a proof for it as well as the necessary
-imports.
+whose name must match the file name, optionally with a proof for it as well as the necessary imports.
 
 The `isabelle` folder is released under the Apache License.
+
+### Informal
+
+Each file contains the problem statement and the proof written in natural mathematical language. The data come from the following sources:
+- The [MATH](https://github.com/hendrycks/math) dataset.
+- The [AOPS](https://artofproblemsolving.com/) website.
+- Manual annotation by Albert Qiaochu Jiang, Timothée Lacroix, Guillaume Lample, Sean Welleck, Jiacheng Liu, and Marie-Anne Lachaux.
 
 ## Code of Conduct and Contributions
 
@@ -117,14 +185,19 @@ full coverage on all formal systems for that version even if that might not be t
 version is frozen.
 
 When reporting a result based on miniF2F please always specify the version you used. The current
-version is `v1`, frozen as of August 2021, including 244 statements (fully translated to Lean and
-Metamath but still WIP in other formal systems).
+version is `v2`, frozen as of October 2022, including 488 statements (fully translated to Lean, Isabelle, and Metamath but still WIP in other formal systems).
 
 Each version will live in its own branch to allow later additions of translated statements or fixes
 to existing statements as needed. The `main` branch remains reserved for active development and
 should not be used when reporting results.
 
 ### Active version
+
+- Version `v2`
+- Freeze date: October 2022
+- Branch: [v2](https://github.com/albertqjiang/miniF2F/tree/v2)
+
+### Previous versions
 
 - Version: `v1`
 - Freeze date: August 2021

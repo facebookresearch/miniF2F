@@ -1,4 +1,4 @@
-let imo-2007-a6 = `!a:num->real.
+let imosl-2007-algebra-p6 = `!a:num->real.
     (!k. a k >= &0) /\
     sum (0..(100-1)) (\x. (a (x + 1)) pow 2) = &1
 ==>
