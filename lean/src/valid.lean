@@ -806,7 +806,7 @@ begin
 end
 
 theorem mathd_numbertheory_155 :
-  finset.card (finset.filter (λ x, x % 19 = 7) (finset.Icc 100 999)) = 52 :=
+  finset.card (finset.filter (λ x, x % 19 = 7) (finset.Icc 100 999)) = 48 :=
 begin
   sorry
 end
