@@ -68,7 +68,7 @@ end
 ```
 
 ###  Isabelle
-```
+```isabelle
 theorem mathd_algebra_17:
   fixes a :: real
   assumes "1 + a>0"
