@@ -50,10 +50,11 @@ We decided to start a separate repository, instead of submitting PRs, for better
 | Hol Light |  165 |  165  |
 | Informal  |  244 |  244  |
 
+
 ## Example problem statement (mathd_algebra_17)
 
 ### Informal
-```math
+```
 Solve for $a$: $\sqrt{4+\sqrt{16+16a}}+ \sqrt{1+\sqrt{1+a}} = 6.$ Show that it is 8.
 ```
 
@@ -68,8 +69,8 @@ begin
 end
 ```
 
-### Isabelle
-```isabelle
+###  Isabelle
+```
 theorem mathd_algebra_17:
   fixes a :: real
   assumes "1 + a>0"
@@ -79,8 +80,8 @@ theorem mathd_algebra_17:
   sorry
 ```
 
-### Hol Light
-```hol-light
+###  Hol Light
+```ml
 let mathd-algebra-17 = `!a. sqrt (&4 + sqrt (&16 + &16 * a)) + sqrt (&1 + sqrt (&1 + a)) = &6 /\ &0 <= (&1 + a) ==> a = &8`;;
 ```
 
