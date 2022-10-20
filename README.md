@@ -150,7 +150,7 @@ The `isabelle` folder is released under the Apache License.
 
 ### Informal
 
-Each file contains the problem statement and the proof written in natural mathematical language. The data come from the following sources: (1) The MATH dataset (2) The Art of Problem Solving website (3) Albert Qiaochu Jiang, Timothée Lacroix, Guillaume Lample, Sean Welleck, Jiacheng Liu, and Marie-Anne Lachaux.
+Each file contains the problem statement and the proof written in natural mathematical language. The data come from the following sources: (1) The MATH dataset (2) Manually curated (3) Albert Qiaochu Jiang, Timothée Lacroix, Guillaume Lample, Sean Welleck, Jiacheng Liu, and Marie-Anne Lachaux.
 
 ## Code of Conduct and Contributions
 
