@@ -54,9 +54,7 @@ We decided to start a separate repository, instead of submitting PRs, for better
 ## Example problem statement (mathd_algebra_17)
 
 ### Informal
-```
 Solve for $a$: $\sqrt{4+\sqrt{16+16a}}+ \sqrt{1+\sqrt{1+a}} = 6.$ Show that it is 8.
-```
 
 ### Lean
 ```lean
