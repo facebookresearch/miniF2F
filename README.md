@@ -23,18 +23,22 @@ The initial version of the benchmark is described in detail in the following [pr
 }
 ```
 
+The original repo is [miniF2F](https://github.com/openai/miniF2F).
+
 It has then seen significant fixes and improvements, notably the addition of an informal statement and an informal proof for each problem. The curation of the informal component is described in the following [paper](https://openreview.net/forum?id=SMa9EAovKMC). To cite it:
 ```
 @inproceedings{
   anonymous2023draft,
   title={Draft, Sketch, and Prove: Guiding Formal Theorem Provers with Informal Proofs},
   author={Anonymous},
-  booktitle={Submitted to The Eleventh International Conference on Learning Representations },
+  booktitle={Submitted to The Eleventh International Conference on Learning Representations},
   year={2023},
   url={https://openreview.net/forum?id=SMa9EAovKMC},
   note={under review}
 }
 ```
+
+We decided to start a separate repository, instead of submitting PRs, for better maintainence of the dataset.
 
 ## Statistics
 
@@ -45,6 +49,40 @@ It has then seen significant fixes and improvements, notably the addition of an 
 | Isabelle  |  244 |  244  |
 | Hol Light |  165 |  165  |
 | Informal  |  244 |  244  |
+
+## Example problem statement (mathd_algebra_17)
+
+### Informal
+```math
+Solve for $a$: $\sqrt{4+\sqrt{16+16a}}+ \sqrt{1+\sqrt{1+a}} = 6.$ Show that it is 8.
+```
+
+### Lean
+```lean
+theorem mathd_algebra_17
+  (a : ℝ)
+  (h₀ : real.sqrt (4 + real.sqrt (16 + 16 * a)) + real.sqrt (1 + real.sqrt (1 + a)) = 6) :
+  a = 8 :=
+begin
+  sorry
+end
+```
+
+### Isabelle
+```isabelle
+theorem mathd_algebra_17:
+  fixes a :: real
+  assumes "1 + a>0"
+  assumes "sqrt (4 + sqrt (16 + 16 * a)) 
+    + sqrt (1 + sqrt (1 + a)) = 6" 
+  shows "a = 8"
+  sorry
+```
+
+### Hol Light
+```hol-light
+let mathd-algebra-17 = `!a. sqrt (&4 + sqrt (&16 + &16 * a)) + sqrt (&1 + sqrt (&1 + a)) = &6 /\ &0 <= (&1 + a) ==> a = &8`;;
+```
 
 ## Structure
 
