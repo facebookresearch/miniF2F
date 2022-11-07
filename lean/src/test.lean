@@ -1486,7 +1486,7 @@ theorem imo_2001_p6
   (h₁ : d < c)
   (h₂ : c < b)
   (h₃ : b < a)
-  (h₄ : a * c + b * d = (b + d + a - c) * (b + d - a + c)) :
+  (h₄ : a * c + b * d = (b + d + a - c) * (b + d + c - a)) :
   ¬ nat.prime (a * b + c * d) :=
 begin
   sorry
