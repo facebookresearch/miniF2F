@@ -12,7 +12,7 @@ theorem imo_2001_p6:
     and "d < c"
     and "c < b"
     and "b < a"
-    and "a * c + b * d = (b + d + a - c) * (b + d - a + c)" 
+    and "a * c + b * d = (b + d + a - c) * (b + d + c - a)" 
   shows "\<not> prime (a * b + c * d)"
   sorry
 
