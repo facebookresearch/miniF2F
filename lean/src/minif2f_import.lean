@@ -2,7 +2,6 @@ import algebra.algebra.basic
 import algebra.order.floor
 import algebra.associated
 import algebra.big_operators.basic
-import algebra.big_operators.enat
 import algebra.big_operators.order
 import algebra.big_operators.pi
 import algebra.geom_sum
@@ -21,9 +20,7 @@ import analysis.inner_product_space.euclidean_dist
 import analysis.normed_space.pi_Lp
 import analysis.special_functions.exp
 import analysis.special_functions.exp_deriv
-import analysis.special_functions.log
-import analysis.special_functions.logb
-import analysis.special_functions.log_deriv
+import analysis.special_functions.log.base
 import analysis.special_functions.pow
 import analysis.special_functions.sqrt
 import analysis.special_functions.trigonometric.basic
@@ -51,7 +48,6 @@ import data.nat.parity
 import data.nat.prime
 import data.pnat.basic
 import data.pnat.prime
-import data.polynomial
 import data.polynomial.basic
 import data.polynomial.eval
 import data.rat.basic
@@ -69,7 +65,6 @@ import field_theory.finite.basic
 import geometry.euclidean.basic
 import geometry.euclidean.circumcenter
 import geometry.euclidean.monge_point
-import geometry.euclidean.sphere
 import init.data.nat.gcd
 import linear_algebra.affine_space.affine_map
 import linear_algebra.affine_space.independent
@@ -80,7 +75,6 @@ import measure_theory.integral.interval_integral
 import number_theory.arithmetic_function
 import number_theory.legendre_symbol.quadratic_reciprocity
 import number_theory.primes_congruent_one
-import order.bounds
 import order.filter.basic
 import order.well_founded
 import topology.basic

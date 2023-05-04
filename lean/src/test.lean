@@ -170,7 +170,7 @@ end
 theorem algebra_sqineq_unitcircatbpabsamblt1
   (a b: ℝ)
   (h₀ : a^2 + b^2 = 1) :
-  a * b + ∥a - b∥ ≤ 1 :=
+  a * b + abs(a - b) ≤ 1 :=
 begin
   sorry
 end
@@ -735,6 +735,7 @@ begin
   norm_num,
 end
 
+/-
 theorem mathd_algebra_184
   (a b : nnreal)
   (h₀ : 0 < a ∧ 0 < b)
@@ -785,6 +786,7 @@ begin
   rw h₁,
   ring,
 end
+-/
 
 theorem mathd_numbertheory_552
   (f g h : ℕ+ → ℕ)
@@ -2067,6 +2069,7 @@ begin
   sorry
 end
 
+/-
 theorem mathd_algebra_114
   (a : ℝ)
   (h₀ : a = 8) :
@@ -2117,6 +2120,7 @@ begin
   },
   norm_num,
 end
+-/
 
 theorem imo_2019_p1
   (f : ℤ → ℤ) :

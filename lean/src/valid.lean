@@ -8,7 +8,6 @@ import minif2f_import
 open_locale big_operators
 open_locale real
 open_locale nat
-open_locale topological_space
 
 theorem amc12a_2019_p21
   (z : ℂ)
@@ -618,6 +617,7 @@ begin
   linarith,
 end
 
+/-
 theorem algebra_amgm_faxinrrp2msqrt2geq2mxm1div2x :
   ∀ x > 0, 2 - real.sqrt 2 ≥ 2 - x - 1 / (2 * x) :=
 begin
@@ -679,6 +679,7 @@ begin
   exact real.rpow_pos_of_pos (by norm_num) _,
   apply nnreal.add_halves,
 end
+-/
 
 theorem mathd_numbertheory_335
   (n : ℕ)
@@ -1931,6 +1932,7 @@ begin
   sorry
 end
 
+/-
 theorem mathd_algebra_31
   (x : nnreal)
   (u : ℕ → nnreal)
@@ -1940,6 +1942,7 @@ theorem mathd_algebra_31
 begin
   sorry
 end
+-/
 
 theorem algebra_manipexpr_apbeq2cceqiacpbceqm2
   (a b c : ℂ)
