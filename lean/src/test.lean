@@ -735,7 +735,6 @@ begin
   norm_num,
 end
 
-/-
 theorem mathd_algebra_184
   (a b : nnreal)
   (h₀ : 0 < a ∧ 0 < b)
@@ -757,7 +756,6 @@ begin
     },
     rw [h₅, nnreal.sqrt_eq_iff_sq_eq],
     rw ← this,
-    ring,
   },
 
   have key₂ : (6 * b * b) = 54,
@@ -786,7 +784,6 @@ begin
   rw h₁,
   ring,
 end
--/
 
 theorem mathd_numbertheory_552
   (f g h : ℕ+ → ℕ)
@@ -2069,7 +2066,6 @@ begin
   sorry
 end
 
-/-
 theorem mathd_algebra_114
   (a : ℝ)
   (h₀ : a = 8) :
@@ -2077,7 +2073,7 @@ theorem mathd_algebra_114
 begin
   rw h₀,
   have k₁ : 0 ≤ (4:ℝ), linarith,
-  have k₂ : 0 < 3, linarith,
+  have k₂ : 3 ≠ 0, linarith,
   have k₃ : (64:ℝ) = 4^(3:ℝ), {
     suffices : (64:ℝ) = 4^((3:ℕ):ℝ), {
       rw this,
@@ -2120,7 +2116,6 @@ begin
   },
   norm_num,
 end
--/
 
 theorem imo_2019_p1
   (f : ℤ → ℤ) :
