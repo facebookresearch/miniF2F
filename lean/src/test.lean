@@ -133,7 +133,8 @@ end
 theorem mathd_numbertheory_237 :
   (∑ k in (finset.range 101), k) % 6 = 4 :=
 begin
-  sorry
+  rw [finset.sum_range_succ'],
+  norm_num [finset.sum_range_succ],
 end
 
 theorem mathd_algebra_33
@@ -644,7 +645,7 @@ end
 theorem mathd_numbertheory_175 :
   (2^2010) % 10 = 4 :=
 begin
-  sorry
+  norm_num [pow_succ],
 end
 
 theorem induction_sumkexp3eqsumksq
@@ -836,13 +837,15 @@ theorem mathd_numbertheory_293
   (h₁ : 11∣20 * 100 + 10 * n + 7) :
   n = 5 :=
 begin
-  sorry
+  contrapose! h₁,
+  norm_num [h₁],
+  dec_trivial!,
 end
 
 theorem mathd_numbertheory_769 :
   (129^34 + 96^38) % 11 = 9 :=
 begin
-  sorry
+  norm_num [add_assoc],
 end
 
 theorem mathd_algebra_452
@@ -986,7 +989,9 @@ end
 theorem amc12a_2013_p4 :
   (2^2014 + 2^2012) / (2^2014 - 2^2012) = (5:ℝ) / 3 :=
 begin
-  sorry
+  rw div_eq_iff,
+  norm_num,
+  norm_num,
 end
 
 theorem mathd_algebra_392
@@ -1020,7 +1025,9 @@ end
 theorem mathd_numbertheory_343 :
   (∏ k in finset.range 6, (2 * k + 1)) % 10 = 5 :=
 begin
-  sorry
+  rw [finset.prod_range_succ, 
+  finset.prod_range_succ],
+  norm_num [finset.prod, finset.prod_range_succ],
 end
 
 theorem mathd_algebra_756
@@ -1681,7 +1688,9 @@ theorem mathd_numbertheory_100
   (h₂ : nat.lcm n 40 = 280) :
   n = 70 :=
 begin
-  sorry
+  have h₃ := nat.gcd_mul_lcm n 40,
+  rw [h₁, h₂] at h₃, 
+  linarith,
 end
 
 theorem mathd_algebra_313
@@ -1874,7 +1883,7 @@ end
 theorem mathd_numbertheory_212 :
   (16^17 * 17^18 * 18^19) % 10 = 8 :=
 begin
-  sorry
+  norm_num,
 end
 
 theorem mathd_numbertheory_320
@@ -1893,7 +1902,9 @@ theorem mathd_algebra_125
   (h₂ : (↑x - (3:ℤ)) + (y - (3:ℤ)) = 30) :
   x = 6 :=
 begin
-  sorry
+  revert h₂,
+  intro h,
+  linarith,
 end
 
 theorem induction_1pxpownlt1pnx
@@ -2212,7 +2223,7 @@ end
 theorem mathd_numbertheory_239 :
   (∑ k in finset.Icc 1 12, k) % 4 = 2 :=
 begin
-  sorry
+  simpa using nat.mod_add_div 1 12,
 end
 
 theorem amc12b_2002_p2
@@ -2247,7 +2258,7 @@ end
 theorem mathd_numbertheory_517 :
   (121 * 122 * 123) % 4 = 2 :=
 begin
-  sorry
+  norm_num1,
 end
 
 theorem amc12a_2009_p7
@@ -2515,7 +2526,8 @@ end
 theorem mathd_numbertheory_127 :
   (∑ k in (finset.range 101), 2^k) % 7 = 3 :=
 begin
-  sorry
+  rw [finset.sum_range_succ, finset.sum_range_succ],
+  norm_num [finset.sum],
 end
 
 theorem imo_1974_p3
@@ -2550,7 +2562,9 @@ theorem mathd_algebra_158
   (h₁ : ↑∑ k in finset.range 8, (2 * k + 1) - ↑∑ k in finset.range 5, (a + 2 * k) = (4:ℤ)) :
   a = 8 :=
 begin
-  sorry
+  simp only [nat.cast_sum, finset.sum_range_succ] at h₁,
+  simp at h₁,
+  linarith,
 end
 
 theorem algebra_absxm1pabsxpabsxp1eqxp2_0leqxleq1
@@ -2570,7 +2584,8 @@ theorem aime_1990_p4
   (h₄ : 1 / (x^2 - 10 * x - 29) + 1 / (x^2 - 10 * x - 45) - 2 / (x^2 - 10 * x - 69) = 0) :
   x = 13 :=
 begin
-  sorry
+  field_simp at h₃ h₄,
+  nlinarith,
 end
 
 theorem mathd_numbertheory_541
@@ -2653,7 +2668,9 @@ theorem mathd_numbertheory_150
   (h₀ : ¬ nat.prime (7 + 30 * n)) :
   6 ≤ n :=
 begin
-  sorry
+  contrapose! h₀,
+  rw nat.prime_def_lt,
+  dec_trivial!,
 end
 
 theorem aime_1989_p8
@@ -2663,7 +2680,7 @@ theorem aime_1989_p8
   (h₂ : 9 * a + 16 * b + 25 * c + 36 * d + 49 * e + 64 * f + 81 * g = 123) :
   16 * a + 25 * b + 36 * c + 49 * d + 64 * e + 81 * f + 100 * g = 334 :=
 begin
-  sorry
+  linarith,
 end
 
 theorem mathd_numbertheory_296
@@ -2719,7 +2736,8 @@ theorem mathd_numbertheory_185
   (h₀ : n % 5 = 3) :
   (2 * n) % 5 = 1 :=
 begin
-  sorry
+  rw ← nat.mod_add_div n 5,
+  norm_num [h₀, nat.mul_mod],
 end
 
 theorem mathd_algebra_441
