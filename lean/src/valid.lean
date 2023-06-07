@@ -688,7 +688,8 @@ theorem mathd_numbertheory_335
   (h₀ : n % 7 = 5) :
   (5 * n) % 7 = 4 :=
 begin
-  sorry
+  rw [nat.mul_mod, h₀], 
+  norm_num,
 end
 
 theorem mathd_numbertheory_35
@@ -961,6 +962,7 @@ theorem algebra_2rootsintpoly_am10tap11eqasqpam110
 begin
   ring,
 end
+
 theorem aime_1991_p1
   (x y : ℕ)
   (h₀ : 0 < x ∧ 0 < y)
@@ -1389,7 +1391,8 @@ theorem mathd_numbertheory_458
   (h₀ : n % 8 = 7) :
   n % 4 = 3 :=
 begin
-  sorry
+  rw [← nat.mod_mod_of_dvd n, h₀],
+  all_goals {norm_num},
 end
 
 theorem amc12a_2008_p15
@@ -1556,7 +1559,8 @@ theorem mathd_algebra_144
   (h₃ : a + b > c) :
   d < 10 :=
 begin
-  sorry
+  contrapose! h₃,
+  linarith,
 end
 
 theorem mathd_algebra_282
@@ -1952,7 +1956,8 @@ theorem mathd_numbertheory_370
   (h₀ : n % 7 = 3) :
   (2 * n + 1) % 7 = 0 :=
 begin
-  sorry
+  norm_num [nat.succ_mul, h₀],
+  norm_num [nat.add_mod, h₀],
 end
 
 theorem mathd_algebra_437
@@ -2315,7 +2320,8 @@ theorem mathd_numbertheory_412
   (h₁ : y % 19 = 7) :
   ((x + 1)^2 * (y + 5)^3) % 19 = 13 :=
 begin
-  sorry
+  norm_num [pow_succ],
+  norm_num [nat.add_mod, nat.mul_mod, h₀, h₁],
 end
 
 theorem mathd_algebra_181

@@ -454,7 +454,9 @@ end
 theorem mathd_numbertheory_12 :
   finset.card (finset.filter (λ x, 20∣x) (finset.Icc 15 85)) = 4 :=
 begin
-  sorry
+  classical,
+  classical,
+  refine finset.card_eq_sum_ones _,
 end
 
 theorem mathd_numbertheory_345 :
@@ -466,7 +468,8 @@ end
 theorem mathd_numbertheory_447 :
   ∑ k in finset.filter (λ x, 3∣x) (finset.Icc 1 49), (k % 10) = 78 :=
 begin
-  sorry
+  dsimp,
+  dec_trivial,
 end
 
 theorem mathd_numbertheory_328 :
