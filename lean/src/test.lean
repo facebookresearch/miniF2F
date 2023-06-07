@@ -1028,8 +1028,7 @@ end
 theorem mathd_numbertheory_343 :
   (∏ k in finset.range 6, (2 * k + 1)) % 10 = 5 :=
 begin
-  rw [finset.prod_range_succ, 
-  finset.prod_range_succ],
+  rw [finset.prod_range_succ, finset.prod_range_succ],
   norm_num [finset.prod, finset.prod_range_succ],
 end
 
