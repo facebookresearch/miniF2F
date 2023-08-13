@@ -15,6 +15,10 @@ import Mathlib.Algebra.Ring.Basic
 import Mathlib.Analysis.Asymptotics.AsymptoticEquivalent
 --import Mathlib.Analysis.MeanInequalities
 import Mathlib.Analysis.NormedSpace.Basic
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
+import Mathlib.Analysis.SpecialFunctions.Log.Base
+
+-- import Mathlib.Analysis.SpecialFunctions.Log.Base
 --import Mathlib.Analysis.InnerProductSpace.Basic
 --import Mathlib.Analysis.InnerProductSpace.EuclideanDist
 --import Mathlib.Analysis.NormedSpace.PiLp
@@ -61,7 +65,7 @@ import Mathlib.Data.Real.Sqrt
 --import Mathlib.Data.Real.GoldenRatio
 import Mathlib.Data.Set.Finite
 import Mathlib.Data.Sym.Sym2
-import Mathlib.Data.Zmod.Basic
+import Mathlib.Data.ZMod.Basic
 import Mathlib.Dynamics.FixedPoints.Basic
 --import Mathlib.FieldTheory.Finite.Basic
 /-
@@ -79,7 +83,7 @@ import Mathlib.Logic.Equiv.Basic
 --import Mathlib.NumberTheory.LegendreSymbol.QuadraticReciprocity
 --import Mathlib.NumberTheory.PrimesCongruentOne
 import Mathlib.Order.Filter.Basic
+import Mathlib.Order.LocallyFinite
 import Mathlib.Order.WellFounded
 import Mathlib.Topology.Basic
 import Mathlib.Topology.Instances.NNReal
-

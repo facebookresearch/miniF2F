@@ -16,7 +16,7 @@ open Nat
 open Topology
 
 theorem amc12a_2019_p21 (z : ℂ) (h₀ : z = (1 + Complex.I) / Real.sqrt 2) :
-    ((∑ k in Finset.Icc 1 12, z ^ k ^ 2) * ∑ k in Finset.Icc 1 12, 1 / z ^ k ^ 2) = 36 := by sorry
+    ((∑ k : ℤ in Finset.Icc 1 12, z ^ k ^ 2) * ∑ k : ℤ in Finset.Icc 1 12, 1 / z ^ k ^ 2) = 36 := by sorry
 #align amc12a_2019_p21 amc12a_2019_p21
 
 theorem amc12a_2015_p10 (x y : ℤ) (h₀ : 0 < y) (h₁ : y < x) (h₂ : x + y + x * y = 80) : x = 26 := by
