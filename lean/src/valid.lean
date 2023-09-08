@@ -96,7 +96,8 @@ end
 theorem mathd_numbertheory_169 :
   nat.gcd 20! 200000 = 40000 :=
 begin
-  sorry
+  rw nat.gcd_comm,
+  norm_num,
 end
 
 theorem amc12a_2009_p9
@@ -145,7 +146,8 @@ end
 theorem mathd_numbertheory_149 :
   ∑ k in (finset.filter (λ x, x % 8 = 5 ∧ x % 6 = 3) (finset.range 50)), k = 66 :=
 begin
-  sorry
+  rw [finset.sum_filter, finset.sum_range_succ],
+  dec_trivial,
 end
 
 theorem imo_1984_p2
@@ -260,7 +262,8 @@ end
 theorem mathd_numbertheory_466 :
   (∑ k in (finset.range 11), k) % 9 = 1 :=
 begin
-  sorry
+  rw [finset.sum_range_succ, finset.sum_range_succ], 
+  norm_num [finset.sum],
 end
 
 theorem mathd_algebra_48
@@ -685,7 +688,8 @@ theorem mathd_numbertheory_335
   (h₀ : n % 7 = 5) :
   (5 * n) % 7 = 4 :=
 begin
-  sorry
+  rw [nat.mul_mod, h₀], 
+  norm_num,
 end
 
 theorem mathd_numbertheory_35
@@ -930,17 +934,9 @@ end
 theorem mathd_numbertheory_211 :
   finset.card (finset.filter (λ n, 6 ∣ (4 * ↑n - (2 : ℤ))) (finset.range 60)) = 20 :=
 begin
-  -- apply le_antisymm,
-  -- -- haveI := classical.prop_decidable,
-  -- swap,
-  -- dec_trivial!,
-  -- apply le_trans,
-  -- swap,
-  -- apply nat.le_of_dvd,
-  -- { norm_num, },
-  -- -- haveI := classical.dec,
-  -- simp,
-  sorry
+  rw finset.card_eq_sum_ones,
+  rw [finset.sum_filter, finset.sum_range_succ'],
+  dec_trivial,
 end
 
 theorem mathd_numbertheory_640 :
@@ -966,6 +962,7 @@ theorem algebra_2rootsintpoly_am10tap11eqasqpam110
 begin
   ring,
 end
+
 theorem aime_1991_p1
   (x y : ℕ)
   (h₀ : 0 < x ∧ 0 < y)
@@ -1394,7 +1391,8 @@ theorem mathd_numbertheory_458
   (h₀ : n % 8 = 7) :
   n % 4 = 3 :=
 begin
-  sorry
+  rw [← nat.mod_mod_of_dvd n, h₀],
+  all_goals {norm_num},
 end
 
 theorem amc12a_2008_p15
@@ -1454,7 +1452,7 @@ end
 theorem mathd_numbertheory_252 :
   7! % 23 = 3 :=
 begin
-  sorry
+  norm_num [fin.succ_ne_zero],
 end
 
 theorem amc12a_2020_p21
@@ -1504,7 +1502,7 @@ end
 theorem mathd_numbertheory_269 :
   (2005^2 + 2005^0 + 2005^0 + 2005^5) % 100 = 52 :=
 begin
-  sorry
+  norm_num,
 end
 
 theorem aime_1990_p2 :
@@ -1561,7 +1559,8 @@ theorem mathd_algebra_144
   (h₃ : a + b > c) :
   d < 10 :=
 begin
-  sorry
+  contrapose! h₃,
+  linarith,
 end
 
 theorem mathd_algebra_282
@@ -1714,7 +1713,8 @@ theorem mathd_algebra_616
   (h₁ : ∀ x, g x = x - 1) :
   f (g 1) = 1 :=
 begin
-  sorry
+  simp only [h₀, h₁, pow_one],
+  ring,
 end
 
 theorem mathd_numbertheory_690 :
@@ -1956,7 +1956,8 @@ theorem mathd_numbertheory_370
   (h₀ : n % 7 = 3) :
   (2 * n + 1) % 7 = 0 :=
 begin
-  sorry
+  norm_num [nat.succ_mul, h₀],
+  norm_num [nat.add_mod, h₀],
 end
 
 theorem mathd_algebra_437
@@ -2319,7 +2320,8 @@ theorem mathd_numbertheory_412
   (h₁ : y % 19 = 7) :
   ((x + 1)^2 * (y + 5)^3) % 19 = 13 :=
 begin
-  sorry
+  norm_num [pow_succ],
+  norm_num [nat.add_mod, nat.mul_mod, h₀, h₁],
 end
 
 theorem mathd_algebra_181
@@ -2375,7 +2377,8 @@ theorem amc12a_2017_p2
   (h₂ : x + y = 4 * (x * y)) :
   1 / x + 1 / y = 4 :=
 begin
-  sorry
+  field_simp [h₀, h₁, h₂],
+  linarith,
 end
 
 theorem algebra_amgm_sumasqdivbsqgeqsumbdiva
@@ -2389,7 +2392,7 @@ end
 theorem mathd_numbertheory_202 :
   (19^19 + 99^99) % 10 = 8 :=
 begin
-  sorry
+  norm_num [add_comm, add_assoc],
 end
 
 theorem imo_1979_p1
