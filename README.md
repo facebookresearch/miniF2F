@@ -1,6 +1,14 @@
 # MiniF2F
 
+## Bug reports and update policy for facebookresearch/miniF2F
+
 **Note: This repository is a fork of the original OpenAI miniF2F repository [https://github.com/openai/miniF2F](https://github.com/openai/miniF2F), with additional data and many formal statement fixes.**
+
+If you find errors in the statement formalizations, please submit a pull request. We will continue updating the dataset. Please cite the version you used by commit or date for reproducible evaluations.
+
+We will not accept pull requests with additional proofs to reduce test set contamination.
+
+## Overview
 
 MiniF2F is a formal mathematics benchmark (translated across multiple formal systems) consisting of
 exercise statements from olympiads (AMC, AIME, IMO) as well as high-school and undergraduate maths
