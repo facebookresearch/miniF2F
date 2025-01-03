@@ -690,7 +690,7 @@ end
 
 theorem mathd_numbertheory_35
   (S : finset ℕ)
-  (h₀ : ∀ (n : ℕ), n ∣ (nat.sqrt 196)) :
+  (h₀ : ∀ (n : S), n ∣ (nat.sqrt 196)) :
   ∑ k in S, k = 24 :=
 begin
   sorry
